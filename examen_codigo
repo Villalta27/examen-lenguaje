@@ -1,0 +1,14 @@
+def ordenar_numeros(entero):
+    for i in range(len(entero)):
+        for j in range(i + 1, len(entero)):
+            if entero[i] > entero[j]:
+                entero[i], entero[j] = entero[j], entero[i]
+    return entero
+
+entrada = input("Ingresa los numeros separados por espacios: ")
+
+numeros = list(map(int, entrada.split()))
+
+numeros_ordenados = ordenar_numeros(numeros)
+
+print("Numeros ordenados:", numeros_ordenados)
